@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MySQL Workbench</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/mysql-workbench.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside data-sidebar></aside>
+        <main class="main">
+            <header data-topbar></header>
+            <div class="page-content">
+                <p class="help">Learning parser and local simulator — not a production MySQL engine.</p>
+                <div class="split">
+                    <aside class="panel">
+                        <div class="field"><label for="schema-select">Schema</label><select id="schema-select"
+                                class="select"></select></div>
+                        <h3>Tables</h3>
+                        <div id="schema-tree" class="list"></div>
+                        <h3>Saved queries</h3>
+                        <div id="saved-queries" class="list"></div>
+                    </aside>
+                    <div class="grid">
+                        <section class="panel">
+                            <div class="panel-header">
+                                <h2>SQL editor</h2>
+                                <div class="toolbar"><button id="copy-sql" class="btn btn-small">Copy</button><button
+                                        id="format-sql" class="btn btn-small">Format</button><button id="explain-sql"
+                                        class="btn btn-small">Explain</button><button id="save-query"
+                                        class="btn btn-small">Save</button><button id="run-query"
+                                        class="btn btn-primary">Simulate</button></div>
+                            </div><textarea id="sql-editor" class="textarea code-editor" spellcheck="false"></textarea>
+                            <div class="toolbar"><label class="btn btn-small">Import SQL<input id="sql-import"
+                                        type="file" accept=".sql,.txt" hidden></label><button id="export-sql"
+                                    class="btn btn-small">Export SQL</button><select id="sample-query"
+                                    class="select compact-select" aria-label="Load sample"></select></div>
+                        </section>
+                        <section class="grid grid-2">
+                            <div class="panel">
+                                <h3>Execution explanation</h3>
+                                <div id="explanation" class="list"></div>
+                            </div>
+                            <div class="panel">
+                                <h3>Query statistics</h3>
+                                <div id="query-stats"></div>
+                            </div>
+                        </section>
+                        <section class="panel">
+                            <h2>Simulated results</h2>
+                            <div id="query-results"></div>
+                        </section>
+                        <section class="panel">
+                            <h2>History</h2>
+                            <div id="query-history" class="list"></div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/shared.js"></script>
+    <script src="js/mysql-workbench.js"></script>
+</body>
+
+</html>

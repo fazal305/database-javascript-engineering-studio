@@ -1,0 +1,71 @@
+.hero {
+  padding: clamp(28px, 5vw, 64px);
+  margin-bottom: 18px;
+  overflow: hidden;
+  position: relative;
+}
+.hero::after {
+  content: "DB ↔ JS";
+  position: absolute;
+  right: 5%;
+  top: 14%;
+  font: 800 clamp(3rem, 8vw, 8rem) var(--font-mono);
+  color: color-mix(in srgb, var(--primary) 7%, transparent);
+  pointer-events: none;
+}
+.hero h2 {
+  max-width: 780px;
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  line-height: 1.02;
+  margin: 18px 0;
+}
+.hero p {
+  max-width: 720px;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+.stats {
+  margin: 18px 0;
+}
+.module-card {
+  display: block;
+  transition: var(--transition-speed);
+}
+.module-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+}
+.module-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--bg);
+  font-weight: 900;
+  margin-bottom: 14px;
+}
+.module-link {
+  color: var(--primary);
+}
+.search {
+  max-width: 260px;
+}
+.lower-grid {
+  margin-top: 18px;
+}
+.progression {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.progression span {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+.progression span:not(:last-child)::after {
+  content: " ↓";
+  color: var(--primary);
+}

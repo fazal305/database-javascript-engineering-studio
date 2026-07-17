@@ -1,0 +1,53 @@
+#relationship-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.er-table {
+  position: absolute;
+  width: 240px;
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-small);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  user-select: none;
+}
+.er-table-header {
+  padding: 10px 12px;
+  background: color-mix(in srgb, var(--primary) 10%, var(--surface));
+  font-weight: 800;
+  cursor: grab;
+}
+.er-column {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 10px;
+  border-top: 1px solid var(--border);
+  font: var(--font-mono);
+  font-size: 0.76rem;
+}
+.relationship-line {
+  stroke: var(--primary);
+  stroke-width: 2;
+  fill: none;
+}
+.relationship-label {
+  fill: var(--text);
+  font-size: 11px;
+}
+dialog {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--text);
+}
+dialog::backdrop {
+  background: color-mix(in srgb, var(--bg) 75%, transparent);
+}
+.dialog-form {
+  min-width: min(520px, 90vw);
+}

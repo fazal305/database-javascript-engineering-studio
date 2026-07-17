@@ -1,0 +1,12 @@
+#execution-plan {
+  min-height: 120px;
+}
+.step-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+.plan-node small {
+  display: block;
+  color: var(--muted);
+}

@@ -1,0 +1,16 @@
+.compact-select {
+  max-width: 260px;
+}
+.schema-table {
+  cursor: pointer;
+}
+.schema-table:hover {
+  border-color: var(--primary);
+}
+#query-history {
+  max-height: 240px;
+  overflow: auto;
+}
+.token-keyword {
+  color: var(--primary);
+}

@@ -1,0 +1,25 @@
+.runtime-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin: 18px 0;
+}
+.runtime-lane {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 8px;
+}
+.runtime-item {
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-small);
+  background: var(--bg-soft);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+}
+@media (max-width: 900px) {
+  .runtime-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

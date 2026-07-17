@@ -1,0 +1,16 @@
+.class-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+}
+.class-card h3 {
+  color: var(--primary);
+}
+.member {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  padding: 4px 0;
+}
+.inherited {
+  color: var(--secondary);
+}

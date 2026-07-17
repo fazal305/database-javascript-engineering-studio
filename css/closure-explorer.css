@@ -1,0 +1,13 @@
+.scope {
+  min-height: 280px;
+}
+.scope-value {
+  font-family: var(--font-mono);
+  padding: 8px;
+  border-left: 3px solid var(--primary);
+  background: var(--bg-soft);
+  margin: 6px 0;
+}
+.retained {
+  border-color: color-mix(in srgb, var(--secondary) 45%, var(--border));
+}

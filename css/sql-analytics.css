@@ -1,0 +1,9 @@
+.chart-panel {
+  min-height: 390px;
+}
+.chart-panel canvas {
+  max-height: 340px;
+}
+#analytics-stats {
+  margin: 18px 0;
+}
