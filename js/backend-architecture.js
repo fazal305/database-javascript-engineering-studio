@@ -30,38 +30,36 @@
     if (scenario.outcome === "validation-error") stop = 5;
     if (scenario.outcome === "auth-error") stop = 3;
     if (scenario.outcome === "database-error") stop = 8;
-    return layerNames
-      .slice(0, stop + 1)
-      .map((name, i) => ({
-        id: i,
-        name,
-        status: i === stop && scenario.outcome !== "success" ? "error" : "ok",
-        request: {
-          method: /create/i.test(scenario.name) ? "POST" : "GET",
-          path: /product/i.test(scenario.name)
-            ? "/api/products/42"
-            : "/api/users",
-          step: name,
-          authenticated: scenario.outcome !== "auth-error",
-        },
-        response:
-          i === stop
-            ? {
-                status:
-                  scenario.outcome === "success"
-                    ? 200
-                    : scenario.outcome === "validation-error"
-                      ? 400
-                      : scenario.outcome === "auth-error"
-                        ? 401
-                        : 503,
-                body:
-                  scenario.outcome === "success"
-                    ? { data: "Sample payload" }
-                    : { error: scenario.name },
-              }
-            : null,
-      }));
+    return layerNames.slice(0, stop + 1).map((name, i) => ({
+      id: i,
+      name,
+      status: i === stop && scenario.outcome !== "success" ? "error" : "ok",
+      request: {
+        method: /create/i.test(scenario.name) ? "POST" : "GET",
+        path: /product/i.test(scenario.name)
+          ? "/api/products/42"
+          : "/api/users",
+        step: name,
+        authenticated: scenario.outcome !== "auth-error",
+      },
+      response:
+        i === stop
+          ? {
+              status:
+                scenario.outcome === "success"
+                  ? 200
+                  : scenario.outcome === "validation-error"
+                    ? 400
+                    : scenario.outcome === "auth-error"
+                      ? 401
+                      : 503,
+              body:
+                scenario.outcome === "success"
+                  ? { data: "Sample payload" }
+                  : { error: scenario.name },
+            }
+          : null,
+    }));
   }
   function renderArchitectureLayers() {
     document.querySelector("#architecture-layers").innerHTML = steps

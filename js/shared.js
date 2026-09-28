@@ -424,20 +424,18 @@
         ],
       },
     ];
-    w.savedQueries = sqlSamples
-      .slice(0, 5)
-      .map((sql, i) => ({
-        id: `saved-${i}`,
-        name: [
-          "All employees",
-          "Active employees",
-          "Team totals",
-          "Employee departments",
-          "Alphabetical roster",
-        ][i],
-        sql,
-        createdAt: Date.now() - i * 86400000,
-      }));
+    w.savedQueries = sqlSamples.slice(0, 5).map((sql, i) => ({
+      id: `saved-${i}`,
+      name: [
+        "All employees",
+        "Active employees",
+        "Team totals",
+        "Employee departments",
+        "Alphabetical roster",
+      ][i],
+      sql,
+      createdAt: Date.now() - i * 86400000,
+    }));
     w.sqlHistory = sqlSamples.map((sql, i) => ({
       id: `history-${i}`,
       sql,
