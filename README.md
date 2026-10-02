@@ -123,18 +123,6 @@ Internet access is needed for the Bootstrap, jQuery, and Chart.js CDNs.
 
 The SQL parser recognizes a useful learning subset rather than a complete dialect. The JavaScript runtime and memory pages illustrate conceptual behavior and do not execute user code. SQL mutations are described and simulated only. No database connection is required, and imported files are size-limited and validated.
 
-## Screenshots
-
-- `assets/screenshots/dashboard.png`
-- `assets/screenshots/database-designer.png`
-- `assets/screenshots/sql-query-visualizer.png`
-- `assets/screenshots/event-loop-visualizer.png`
-- `assets/screenshots/backend-architecture.png`
-
-## Demo Video
-
-Add a 60–90 second `assets/screenshots/walkthrough.gif` showing the dashboard, one SQL simulation, an ER edit, the event loop, and a backend failure flow.
-
 ## Agentic Engineering Process
 
 The project was approached specification-first: shared constraints and state boundaries were defined before module views. Work was split by foundation, interactive engines, persistence, and documentation. Verification gates check file structure, script syntax, prohibited execution APIs, per-page dependencies, shared tokens, and expected exported functions. The browser-only sandbox keeps user data local and simulation boundaries explicit.
